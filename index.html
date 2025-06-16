@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Feria del Bebé</title>
+  <link rel="icon" href="Imagenes/Bebe.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+
+
+</head>
+
+<body>
+
+
+  <!-- Sidebar -->
+  <div id="mySidebar" class="sidebar">
+
+    <!-- Logo fijo al hacer scroll -->
+    <div class="logo-container">
+      <img src="Imagenes/la feria del bebe.png" alt="Logo La Feria del Bebé">
+    </div>
+
+    <br> <br>
+    <br><br>
+    <br><br>
+    <br><br>
+
+
+    <div id="sidebarStickyTitle" class="sidebar-sticky-title"> La Feria del Bebé</div>
+
+    <br>
+    <div class="sidebar-item"><a href="#">Inicio</a></div>
+    <div class="sidebar-item"><a href="#">Carrito</a></div>
+    <div class="sidebar-item"><a href="#">Consejos</a></div>
+    <div class="sidebar-item"><a href="#">Ofertas</a></div>
+    <div class="sidebar-item"><a href="#">Cuenta</a></div>
+
+    <br>
+    <br>
+
+
+    <!-- Acá va el footer -->
+    <br><br><br>
+    <br>
+
+
+    <div class="sidebar-footer">
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+      <p>&copy; 2025 La Feria del Bebé</p>
+      <p>Con amor para tu pequeño 💕</p>
+    </div>
+  </div>
+
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-left">
+      <button class="openbtn" onclick="toggleSidebar()">☰</button>
+      <img src="Imagenes/Bebe.png" alt="Logo" class="logo-img">
+      <strong>La Feria del Bebé </strong>
+    </div>
+    <div id="location-display" class="location-display">
+      Detectando ubicación...
+    </div>
+
+
+    <div class="header-center">
+      <div class="search-box">
+
+        <input type="text" placeholder="Buscar productos, consejos, ofertas...">
+        <button>🔍</button>
+      </div>
+    </div>
+    <div class="header-right">
+      <a href="#" onclick="abrirModalAuth('login')">Iniciar sesión</a>
+      <a href="#" onclick="abrirModalAuth('register')">Registrarse</a>
+      <a href="#" id="carrito-icon">🛒 Carrito (<span id="contador-carrito">0</span>)</a>
+
+    </div>
+  </div>
+
+
+
+
+
+  <!-- Subnav -->
+  <div class="subnav">
+    <span>Cupones</span>
+    <span>Todo para tu bebé</span>
+    <span>Consejos de mamá</span>
+    <span>Ofertas exclusivas</span>
+    <span>Ayuda</span>
+
+
+  </div>
+
+
+
+
+
+  <div class="promo-carousel">
+    <button class="carousel-btn prev" onclick="changeSlide(-1)"></button>
+
+    <div class="carousel-slides">
+      <img src="Imagenes/la feria del bebe.png" class="carousel-image active" alt="Promo 1">
+      <img src="Imagenes/Bebe.png" class="carousel-image active" alt="Promo 2">
+      <img src="Imagenes/Bebe.png" class="carousel-image active" alt="Promo 3">
+      <img src="Imagenes/Bebe.png" class="carousel-image active" alt="Promo 4">
+
+    </div>
+
+    <button class="carousel-btn next" onclick="changeSlide(1)"></button>
+  </div>
+
+
+  <!-- Contenido -->
+  <div id="main" class="main-content">
+
+
+    <h1>Bienvenido a La Feria del Bebé</h1>
+    <p>Explora productos, consejos y amor para los más pequeños del hogar.</p>
+
+    <br>
+    <br>
+    <br>
+
+    <!-- Categorías -->
+    <div class="baby-category-bar">
+      <div class="baby-category" data-categoria="panales">
+        <img src="Imagenes/Pañales.png" alt="Pañales">
+        <p>Pañales</p>
+      </div>
+      <div class="baby-category" data-categoria="juguetes">
+        <img src="Imagenes/Osito.png" alt="Juguetes">
+        <p>Juguetes</p>
+      </div>
+      <div class="baby-category" data-categoria="ropa">
+        <img src="Imagenes/Ropa.png" alt="Ropa Bebé">
+        <p>Ropa Bebé</p>
+      </div>
+      <div class="baby-category" data-categoria="alimentacion">
+        <img src="Imagenes/Comida2.png" alt="Alimentación">
+        <p>Alimentación</p>
+      </div>
+      <div class="baby-category" data-categoria="higiene">
+        <img src="Imagenes/Higiene.png" alt="Higiene">
+        <p>Higiene</p>
+      </div>
+    </div>
+
+    <!-- Productos Alimentacion-->
+    <div class="product-grid">
+      <div class="product-card" data-categoria="alimentacion">
+        <img src="Imagenes/descarga.png" alt="Biberón Anticólicos">
+        <h3>Biberón Anticólicos</h3>
+        <p>$25.000 COP</p>
+        <button>🛒 Comprar</button>
+      </div>
+
+
+      <!-- Productos Higiene-->
+      <div class="product-card" data-categoria="higiene">
+        <img src="Imagenes/Nosotras.png" alt="Toallitas Húmedas">
+        <h3>Toallas Nosotras Buenas Noches Natural X 24 Und + 2 Protectores Largos Nosotras X 10 Und</h3>
+        <p>$23.630 COP</p>
+        <button>🛒 Comprar</button>
+      </div>
+
+      <div class="product-card" data-categoria="higiene">
+        <img src="Imagenes/Tampones.png" alt="Toallitas Húmedas">
+        <h3>Tampón Nosotras Digital Super X 30 Und</h3>
+        <p>$12.640 COP</p>
+        <button>🛒 Comprar</button>
+      </div>
+
+      <div class="product-card" data-categoria="higiene">
+        <img src="Imagenes/Kotex.png" alt="Toallitas Húmedas">
+        <h3>Toallas Higiénicas Kotex Nocturna Ultraprotect X 8 Und</h3>
+        <p>$16.000 COP</p>
+        <button>🛒 Comprar</button>
+      </div>
+
+      <div class="product-card" data-categoria="higiene">
+        <img src="Imagenes/Nosotras 40.png" alt="Toallitas Húmedas">
+        <h3>Toallas Nosotras Invisible Rapigel X 40 Und + 2 Protectores Nosotras Multiestilo X 15 Und</h3>
+        <p>$23.840 COP</p>
+        <button>🛒 Comprar</button>
+      </div>
+
+      <div class="product-card" data-categoria="higiene">
+        <img src="Imagenes/Kotex cuidado.png" alt="Toallitas Húmedas">
+        <h3>Toallas Higiénicas Kotex Puro Y Natural X 24 Und</h3>
+        <p>$12.360 COP</p>
+        <button>🛒 Comprar</button>
+      </div>
+
+
+      <!-- Productos Pañales-->
+      <div class="product-card" data-categoria="panales">
+        <img src="Imagenes/Pañales 1.png" alt="Pañales">
+        <h3>Pañales Winny Pants Xxxg Etapa 6 X 30 Und</h3>
+        <p>$41.560 COP</p>
+        <button>🛒 Comprar</button>
+      </div>
+
+      <div class="product-card" data-categoria="panales">
+        <img src="Imagenes/Pañales 2.png" alt="Pañales">
+        <h3>Pañales Winny Ultratrim Sec Etapa 4 Xg X 50 Und</h3>
+        <p>$55.440 COP</p>
+        <button>🛒 Comprar</button>
+      </div>
+
+      <div class="product-card" data-categoria="panales">
+        <img src="Imagenes/Pañales 3.png" alt="Pañales">
+        <h3>Pañales Winny Ultratrim Sec Etapa 3 G X 50 Und</h3>
+        <p>$47.960 COP</p>
+        <button>🛒 Comprar</button>
+      </div>
+
+      <div class="product-card" data-categoria="panales">
+        <img src="Imagenes/Pañales 4.png" alt="Pañales">
+        <h3>Pañal Farmatodo Premium Etapa 3 Talla G X 30 Und</h3>
+        <p>$27.158 COP</p>
+        <button>🛒 Comprar</button>
+      </div>
+
+      <div class="product-card" data-categoria="panales">
+        <img src="Imagenes/Pañales 5.png" alt="Pañales">
+        <h3>Pañal Farmatodo Premium Etapa 4 Talla Xg X 30 Und</h3>
+        <p>$32.258 COP</p>
+        <button>🛒 Comprar</button>
+      </div>
+
+      <div class="product-card" data-categoria="panales">
+        <img src="Imagenes/Pañales 6.png" alt="Pañales">
+        <h3>Pañales Winny Pants Xxg Etapa 5 X 50 Und</h3>
+        <p>$65.200 COP</p>
+        <button>🛒 Comprar</button>
+      </div>
+
+      <div class="product-card" data-categoria="panales">
+        <img src="Imagenes/Pañales 7.png" alt="Pañales">
+        <h3>Pañales Winny Sensitive Etapa 0 Recién Nacido X 30 Und</h3>
+        <p>$17.560 COP</p>
+        <button>🛒 Comprar</button>
+      </div>
+
+
+
+      <!-- Productos Juguetes-->
+      <div class="product-card" data-categoria="juguetes">
+        <img src="Imagenes/Juguete 1.png" alt="Osito de Peluche">
+        <h3>Juguete Bebe Sonajero Rosa Bright Starts 8672 Bright Starts Blister X 1</h3>
+        <p>$17.940 COP</p>
+        <button>🛒 Comprar</button>
+      </div>
+
+      <div class="product-card" data-categoria="juguetes">
+        <img src="Imagenes/Juguete 2.png" alt="Osito de Peluche">
+        <h3>Juguete Bebe Espejito Elefante Bright Starts 8817 Bright Starts Caja Individual X 1 Und</h3>
+        <p>$113.940 COP</p>
+        <button>🛒 Comprar</button>
+      </div>
+
+      <div class="product-card" data-categoria="juguetes">
+        <img src="Imagenes/Juguete 3.png" alt="Osito de Peluche">
+        <h3>Juguete Bebe Libro Mordedor Bright Starts 8475 Bright Starts Blister X 1</h3>
+        <p>$29.900 COP</p>
+        <button>🛒 Comprar</button>
+      </div>
+
+      <div class="product-card" data-categoria="juguetes">
+        <img src="Imagenes/Juguete 4.png" alt="Osito de Peluche">
+        <h3>Juguete Bebe Libro Mordedor Bright Starts 11794 Bright Starts Blister X 1</h3>
+        <p>$29.940 COP</p>
+        <button>🛒 Comprar</button>
+      </div>
+
+      <div class="product-card" data-categoria="juguetes">
+        <img src="Imagenes/Juguete 5.png" alt="Osito de Peluche">
+        <h3>Silla Bouncer Gato Multikids Baby Caja X 1</h3>
+        <p>$209.950 COP</p>
+        <button>🛒 Comprar</button>
+      </div>
+
+      <div class="product-card" data-categoria="juguetes">
+        <img src="Imagenes/Juguete 6.png" alt="Osito de Peluche">
+        <h3>Silla Mecedora Para Bebe Bright Starts 12228 Bright Starts Caja Individual X 1</h3>
+        <p>$158.947 COP</p>
+        <button>🛒 Comprar</button>
+      </div>
+
+      <div class="product-card" data-categoria="juguetes">
+        <img src="Imagenes/Juguete 7.png" alt="Osito de Peluche">
+        <h3>Silla Alta Twistshake Blanca Twistshake Unidad X 1</h3>
+        <p>$514.950 COP</p>
+        <button>🛒 Comprar</button>
+      </div>
+
+      <div class="product-card" data-categoria="juguetes">
+        <img src="Imagenes/Juguete 8.png" alt="Osito de Peluche">
+        <h3>Fisher Price Silly Safari Tren Animales Divertidos Fisher Price Caja Abierta X 1</h3>
+        <p>$134.500 COP</p>
+        <button>🛒 Comprar</button>
+      </div>
+
+
+
+
+
+
+      <!-- Productos Ropa-->
+      <div class="product-card" data-categoria="ropa">
+        <img src="https://via.placeholder.com/200x200?text=Body" alt="Body Bebé">
+        <h3>Body Bebé Azul</h3>
+        <p>$18.000 COP</p>
+        <button>🛒 Comprar</button>
+      </div>
+    </div>
+
+    <!-- Puedes agregar más productos así 👇 -->
+  </div>
+
+  <div id="modal-auth" class="modal" onclick="cerrarModalDesdeFondo(event)">
+  <div class="modal-content">
+    <h2>Bienvenido a La Feria del Bebé</h2>
+
+    <!-- Login con Google -->
+    <div class="login-social-full">
+      <div id="googleButton"></div>
+    </div>
+
+    <div class="separator"><span>o</span></div>
+
+    <!-- FORMULARIO LOGIN -->
+    <form id="form-login" class="form-auth">
+      <label>Correo electrónico</label>
+      <input type="email" id="login-usuario" required>
+
+      <label>Contraseña</label>
+      <input type="password" id="login-clave" required>
+
+      <button type="submit" class="boton-login-verde">Iniciar sesión</button>
+
+      <p style="text-align: center; margin-top: 10px;">
+        ¿No tienes cuenta? <a href="#" onclick="mostrarFormulario('register')">Regístrate aquí</a>
+      </p>
+    </form>
+
+    <!-- FORMULARIO REGISTRO -->
+    <form id="form-register" class="form-auth" style="display: none;">
+      <label>Nombre</label>
+      <input type="text" id="register-nombre" required>
+
+      <label>Apellido</label>
+      <input type="text" id="register-apellido" required>
+
+      <label>Número de teléfono</label>
+      <input type="tel" id="register-telefono" placeholder="+57 300 1234567" required>
+
+      <label>Fecha de nacimiento</label>
+      <input type="date" id="register-fecha" required>
+
+      <label>Correo electrónico</label>
+      <input type="email" id="register-email" required>
+
+      <label>Contraseña</label>
+      <input type="password" id="register-password" required>
+
+      <label>Confirmar contraseña</label>
+      <input type="password" id="register-confirm" required>
+
+      <label><input type="checkbox" required> Acepto los términos y condiciones</label>
+
+      <button type="submit" class="boton-login-verde">Crear cuenta</button>
+
+      <p style="text-align: center; margin-top: 10px;">
+        ¿Ya tienes cuenta? <a href="#" onclick="mostrarFormulario('login')">Inicia sesión</a>
+      </p>
+    </form>
+  </div>
+</div>
+
+
+
+  <a href="https://wa.me/573125419816" target="_blank" id="whatsappButton">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp">
+  </a>
+
+
+
+
+  <script src="js/script.js"></script>
+
+
+</body>
+
+</html>
